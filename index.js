@@ -12,7 +12,7 @@ const transactionExplanationPath = `${recipe}/explanations/transaction.txt`;
 export const tokenVault = {
   slug: recipe,
   title: "Token Vault",
-  createdAt: Date(2022, 9, 14),
+  createdAt: new Date(2022, 9, 14),
   author: "Flow Blockchain",
   playgroundLink:
     "https://play.onflow.org/8b168390-9712-4578-a437-d15125cf18d9",
