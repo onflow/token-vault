@@ -22,4 +22,7 @@ export const tokenVault = {
   smartContractExplanation: smartContractExplanationPath,
   transactionCode: transactionPath,
   transactionExplanation: transactionExplanationPath,
+  filters: {
+    difficulty: "beginner"
+  }
 };
