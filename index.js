@@ -23,6 +23,6 @@ export const tokenVault = {
   transactionCode: transactionPath,
   transactionExplanation: transactionExplanationPath,
   filters: {
-    difficulty: "beginner"
-  }
+    difficulty: "beginner",
+  },
 };
