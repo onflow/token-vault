@@ -1,5 +1,5 @@
-Here we are creating a new Vault resource into an account.
+This transaction creates a new Vault resource and stores it securely within the user's private storage. The Vault serves as a container for managing tokens within the account.
 
-When that is created and stored into their private storage, we then create public capabilities that others can use to check balance, or deposit tokens.
+After storing the Vault, the transaction establishes public capabilities linked to it. These capabilities allow others to interact with the Vault, enabling actions such as checking its balance or depositing tokens. This setup ensures the Vault is both accessible for approved interactions and protected within the account's private storage.
 
-Once we do that, we check to make sure that the capabilities were indeed created and then we are done with the transaction.
+Finally, the transaction verifies that the public capabilities were successfully created, ensuring the Vault is properly set up for use. 

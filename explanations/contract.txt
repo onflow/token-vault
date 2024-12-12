@@ -1,5 +1,3 @@
-This is a vault resource in a smart contract that can be stored in a users account.
+This smart contract defines a vault resource designed to be stored within a user's account. The vault serves as a secure container for managing a user's token balance, tracking the total amount of tokens held while providing essential functionality for withdrawing and depositing tokens.
 
-It keeps track of the total balance of tokens as well as the functions to withdraw and deposit tokens.
-
-Interfaces such as Provider, Receiver, and Balance are included that allow users to send you money when executing a transaction.
+The vault incorporates key interfaces such as Provider, Receiver, and Balance, which enable token transactions. These interfaces allow users to send and receive tokens efficiently during transactions, ensuring compatibility and interoperability within the broader ecosystem. By integrating these interfaces, the vault resource facilitates streamlined token management and enables robust interactions between accounts in the smart contract.
