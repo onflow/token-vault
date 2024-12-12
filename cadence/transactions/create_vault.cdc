@@ -6,14 +6,14 @@ transaction {
     prepare(acct: auth(Storage, Capabilities) &Account) {
         // Create a new empty Vault object
         let vaultA <- ExampleToken.createEmptyVault()
-        
+
         // Store the vault in the account storage
         acct.storage.save<@ExampleToken.Vault>(<-vaultA, to: /storage/MainVault)
 
         log("Empty Vault stored")
 
         // Create a public Receiver capability to the Vault
-        let receiverCap = acct.capabilities.storage.issue<&ExampleToken.Vault{ExampleToken.Receiver, ExampleToken.Balance}>(
+        let receiverCap = acct.capabilities.storage.issue<&ExampleToken.Vault>(
             /storage/MainVault
         )
         acct.capabilities.publish(receiverCap, at: /public/MainReceiver)
@@ -26,7 +26,7 @@ transaction {
         assert(
             getAccount(0x02)
                 .capabilities
-                .borrow<&ExampleToken.Vault{ExampleToken.Receiver}>(/public/MainReceiver) != nil,
+                .borrow<&ExampleToken.Vault>(/public/MainReceiver) != nil,
             message: "Vault Receiver Reference was not created correctly"
         )
     }
